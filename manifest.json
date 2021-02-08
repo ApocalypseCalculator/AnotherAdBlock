@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Another Ad Block",
+    "description": "An Ad Blocker extension that attempts to remove as many ads as possible",
+    "version": "0.0.1",
+    "author": "ApocalypseCalculator",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}
