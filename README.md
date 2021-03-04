@@ -2,7 +2,7 @@
 
 Yet another Ad Block, made for efficiency and simplicity
 
-It simply blocks all connections to the blacklisted domains
+It simply blocks all connections to the blacklisted domains, thus preventing nearly all trackers/ads from operating.
 
 
 
