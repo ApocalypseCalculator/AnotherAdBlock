@@ -14,6 +14,19 @@
             "background.js"
         ]
     },
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "inject.js"
+    ],
     "browser_action": {
         "default_icon": {
             "32": "icon.png"
