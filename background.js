@@ -11,7 +11,7 @@ chrome.runtime.getPackageDirectoryEntry(function (root) {
                 );
                 chrome.browserAction.setBadgeText({ text: 'ON' });
                 chrome.browserAction.setBadgeBackgroundColor({ color: '#4688F1' });
-                chrome.browserAction.setTitle({ title: "Another Ad Block is Active. Press Ctrl+Shift+A to toggle on/off" });
+                chrome.browserAction.setTitle({ title: "Another Ad Block is Active" });
             };
             reader.readAsText(file);
         });

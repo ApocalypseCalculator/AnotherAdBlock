@@ -6,6 +6,8 @@ Yet another Ad Block, made for efficiency and simplicity
 
 It simply blocks all connections to the blacklisted domains, thus preventing nearly all trackers/ads from operating.
 
+For video sites like YouTube, it injects a script that force skips the ad. 
+
 
 ## Installation Guide
 
