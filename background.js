@@ -9,7 +9,9 @@ chrome.runtime.getPackageDirectoryEntry(function (root) {
                     { urls: parsed.blockedSites },
                     ["blocking"]
                 );
-                chrome.webRequest.onBeforeSendHeaders.addListener(
+                
+                // UNCOMMENT THE FOLLOWING BLOCK IF YOU'D LIKE TO BLOCK DATA COLLECTION HTTP HEADERS
+                /*chrome.webRequest.onBeforeSendHeaders.addListener(
                     function (details) {
                         for (var i = details.requestHeaders.length - 1; i >= 0; i--) {
                             if (parsed.blockedHeaders.includes(`${details.requestHeaders[i].name}`.toLowerCase())) {
@@ -20,7 +22,8 @@ chrome.runtime.getPackageDirectoryEntry(function (root) {
                     },
                     {urls: ['<all_urls>']},
                     ['blocking', 'requestHeaders']
-                );
+                );*/
+
                 /*chrome.webRequest.onHeadersReceived.addListener(
                     function (details) {
                         // check Set Cookie headers for tracker cookies
