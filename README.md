@@ -6,7 +6,10 @@ Yet another Ad Block, made for efficiency and simplicity
 
 It simply blocks all connections to the blacklisted domains, thus preventing nearly all trackers/ads from operating.
 
-For video sites like YouTube, it injects a script that force skips the ad. 
+Additionally, for these sites, custom scripts are injected: 
+- YouTube: attempts to force skip the ad/reduce ad duration
+- Google: removes the ads/promoted listings
+- Reddit: removes ads and unblocks NSFW posts
 
 
 ## Installation Guide
