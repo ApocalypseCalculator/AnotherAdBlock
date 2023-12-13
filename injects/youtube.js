@@ -14,4 +14,13 @@ try {
             clearTimeout(timeout);
         }
     })();
+    
+    const interval = setInterval(() => {
+        let ads = document.querySelectorAll('ytd-search-pyv-renderer,ytd-ad-slot-renderer,div[id="player-ads"]');
+        if(ads.length > 0) {
+            ads.forEach(e => {
+                e.remove();
+            });
+        }
+    }, 200);
 } catch {}
