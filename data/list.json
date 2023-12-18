@@ -4653,6 +4653,8 @@
         "*://*.eb9d0cb548.com/*",
         "*://*.4087aa0dc1.com/*",
         "*://*.1ab9ee01cb.com/*",
-	    "*://*.3897e90a2e.com/*"
+	    "*://*.3897e90a2e.com/*",
+        "*://*.sharethis.com/*",
+        "*://*.disposalangrily.com/*"
     ]
 }
