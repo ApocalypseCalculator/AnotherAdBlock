@@ -8,11 +8,17 @@ try {
                 try {
                     if (video.length > 0) {
                         video[video.length - 1].currentTime = video[video.length - 1].duration;
+                        console.log('Skipped an ad video!');
                     }
                 }
                 catch { }
             }
-        }, 500);
+            let skipbtn = document.querySelector("button.ytp-ad-skip-button-modern");
+            if(defined(skipbtn)) {
+                skipbtn.click();
+                console.log('Clicked skip button!');
+            }
+        }, 300);
         return function () {
             clearTimeout(timeout);
         }
@@ -25,5 +31,5 @@ try {
                 e.remove();
             });
         }
-    }, 200);
+    }, 300);
 } catch { }
