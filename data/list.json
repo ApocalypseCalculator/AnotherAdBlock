@@ -4655,6 +4655,12 @@
         "*://*.1ab9ee01cb.com/*",
 	    "*://*.3897e90a2e.com/*",
         "*://*.sharethis.com/*",
-        "*://*.disposalangrily.com/*"
+        "*://*.disposalangrily.com/*",
+        "*://*.youtube.com/api/stats/*",
+        "*://*.youtube.com/pagead*",
+        "*://*.youtube.com/youtubei/v1/log_event*",
+        "*://play.google.com/log*",
+        "*://*.youtube.com/ptracking*",
+        "*://*.youtube.com/pcs/activeview*"
     ]
 }
