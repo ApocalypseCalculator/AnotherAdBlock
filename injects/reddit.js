@@ -1,3 +1,5 @@
+console.log('[AnotherAdBlock]: Reddit script injected!');
+
 try {
     const interval = setInterval(() => {
         // remove ads
@@ -6,6 +8,7 @@ try {
             ads.forEach(e => {
                 e.remove();
             });
+            console.log(`[AnotherAdBlock]: Removed ${ads.length} ads from page view`);
         }
 
         // unblock NSFW
@@ -18,6 +21,7 @@ try {
             document.querySelectorAll('[bundlename="desktop_rpl_nsfw_blocking_modal"]').item(0).remove();
             document.body.style = "";
             document.querySelectorAll('div[role="presentation"]').item(0).style = "";
+            console.log(`[AnotherAdBlock]: Removed NSFW popup modal`);
         }
 
         let nsfwcalc = document.querySelectorAll('shreddit-aspect-ratio');
@@ -36,6 +40,7 @@ try {
             if(nsfwcalc.length > 0) {
                 nsfwcalc.item(0).parentElement.outerHTML += "Post unblocked by AnotherAdBlock!";
             }
+            console.log(`[AnotherAdBlock]: Unblocked app promotion NSFW block`);
         }
         else if(mediael2.length > 0) {
             // this is when there is nothing but a blur on the image
@@ -45,6 +50,7 @@ try {
                 let img = mediael2.item(0).shadowRoot.querySelector("div>img");
                 document.querySelector('shreddit-blurred-container').outerHTML = blurtemplate(img.naturalHeight/img.naturalWidth, img.src.replace(/preview\.redd\.it/g, "i.redd.it"), img.alt);
                 document.querySelector("shreddit-aspect-ratio").parentElement.outerHTML += "Post unblocked by AnotherAdBlock!";
+                console.log(`[AnotherAdBlock]: Unblocked image blur NSFW block`);
             }
             catch {}
         }
@@ -55,6 +61,7 @@ try {
             sidebarpreviews.forEach(e => {
                 e.style = "";
             });
+            console.log(`[AnotherAdBlock]: Unblurred ${sidebarpreviews.length} previews`);
         }
     }, 200);
 } catch {}
