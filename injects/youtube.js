@@ -3,16 +3,19 @@ console.log('[AnotherAdBlock]: YouTube script injected!');
 try {
     const defined = v => v !== null && v !== undefined;
     setInterval(() => {
-        const ad = [...document.querySelectorAll('.ad-showing')][0];
+        let ad = document.querySelector('.ad-showing')
         if (defined(ad)) {
-            const video = document.querySelectorAll('video');
-            try {
-                if (video.length > 0) {
-                    video[video.length - 1].currentTime = video[video.length - 1].duration;
-                    console.log('[AnotherAdBlock]: Skipped an ad video!');
-                }
+            console.log('[AnotherAdBlock]: Detected an ad video!');
+            let video = document.querySelectorAll('video');
+            if(video.length > 0) {
+                video.forEach(vid => {
+                    try {
+                        vid.currentTime = vid.duration;
+                        console.log('[AnotherAdBlock]: Skipped an ad video!');
+                    }
+                    catch{}
+                });
             }
-            catch { }
         }
         let skipbtn = document.querySelector("button.ytp-ad-skip-button-modern");
         if (defined(skipbtn)) {
