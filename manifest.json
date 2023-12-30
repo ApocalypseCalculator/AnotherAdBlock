@@ -33,6 +33,14 @@
         },
         {
             "js": [
+                "injects/gmaps.js"
+            ],
+            "matches": [
+                "https://www.google.com/maps/*"
+            ]
+        },
+        {
+            "js": [
                 "injects/reddit.js"
             ],
             "matches": [
