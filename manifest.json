@@ -28,7 +28,7 @@
                 "injects/google.js"
             ],
             "matches": [
-                "https://www.google.com/*", "https://www.google.ca/*"
+                "https://www.google.com/search*", "https://www.google.ca/search*"
             ]
         },
         {
@@ -36,7 +36,7 @@
                 "injects/gmaps.js"
             ],
             "matches": [
-                "https://www.google.com/maps/*"
+                "https://www.google.com/maps/*", "https://www.google.ca/maps/*"
             ]
         },
         {
