@@ -46,6 +46,14 @@
             "matches": [
                 "https://www.reddit.com/*"
             ]
+        },
+        {
+            "js": [
+                "injects/amazon.js"
+            ],
+            "matches": [
+                "https://www.amazon.com/*", "https://www.amazon.ca/*"
+            ]
         }
     ],
     "web_accessible_resources": [],
