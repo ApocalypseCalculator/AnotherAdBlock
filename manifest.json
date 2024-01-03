@@ -55,6 +55,15 @@
                 "https://www.amazon.com/*", "https://www.amazon.ca/*"
             ]
         }
+        ,
+        {
+            "js": [
+                "injects/wikipedia.js"
+            ],
+            "matches": [
+                "https://*.wikipedia.org/*"
+            ]
+        }
     ],
     "web_accessible_resources": [],
     "browser_action": {
