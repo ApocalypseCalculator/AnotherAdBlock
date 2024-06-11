@@ -6,7 +6,7 @@ try {
         let ad = document.querySelector('.ad-showing')
         if (defined(ad)) {
             console.log('[AnotherAdBlock]: Detected an ad video!');
-            let video = document.querySelectorAll('video');
+            let video = ad.querySelectorAll('video');
             if(video.length > 0) {
                 video.forEach(vid => {
                     try {
