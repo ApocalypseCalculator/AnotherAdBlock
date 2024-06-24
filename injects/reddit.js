@@ -3,7 +3,7 @@ console.log('[AnotherAdBlock]: Reddit script injected!');
 try {
     const interval = setInterval(() => {
         // remove ads
-        let ads = document.querySelectorAll('shreddit-ad-post'); 
+        let ads = document.querySelectorAll('shreddit-ad-post, shreddit-comments-page-ad, shreddit-sidebar-ad'); 
         if(ads.length > 0) {
             ads.forEach(e => {
                 e.remove();
