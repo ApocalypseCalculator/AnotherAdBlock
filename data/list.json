@@ -1,27 +1,4 @@
 {
-    "blockedHeaders": [
-        "content-dpr",
-        "cookie2",
-        "device-memory",
-        "downlink",
-        "dpr",
-        "ect",
-        "permissions-policy",
-        "feature-policy",
-        "large-allocation",
-        "public-key-pins-report-only",
-        "public-key-pins",
-        "rtt",
-        "sec-ch-ua-arch",
-        "sec-ch-ua-bitness",
-        "sec-ch-ua-full-version",
-        "sec-ch-ua-full-version-list",
-        "sec-ch-ua-mobile",
-        "sec-ch-ua-model",
-        "sec-ch-ua-platform-version",
-        "sec-ch-ua-platform",
-        "sec-ch-ua"
-    ],
     "blockedSites": [
         "*://*.criteo.com/*",
         "*://*.2mdn.net/*",
