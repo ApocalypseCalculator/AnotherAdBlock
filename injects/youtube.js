@@ -10,7 +10,7 @@ try {
             if(video.length > 0) {
                 video.forEach(vid => {
                     try {
-                        vid.currentTime = vid.duration;
+                        vid.currentTime = Math.max(vid.duration - 1, 0);
                         console.log('[AnotherAdBlock]: Skipped an ad video!');
                     }
                     catch{}
