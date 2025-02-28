@@ -33,14 +33,6 @@
         },
         {
             "js": [
-                "injects/gmaps.js"
-            ],
-            "matches": [
-                "https://www.google.com/maps/*", "https://www.google.ca/maps/*"
-            ]
-        },
-        {
-            "js": [
                 "injects/reddit.js"
             ],
             "matches": [
