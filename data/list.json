@@ -3579,7 +3579,7 @@
         "*://*.sms-mmm.com/*",
         "*://*.sn00.net/*",
         "*://*.snack-media.com/*",
-        "*://*.snap.com/*",
+        "*://snap.com/*",
         "*://*.snapvine.club/*",
         "*://*.sndkorea.co.kr/*",
         "*://*.so-excited.com/*",
@@ -6194,6 +6194,21 @@
         "*://*.rebelmouse.com/*",
         "*://*.piano.io/*",
         "*://*.pushwoosh.com/*",
-        "*://*.tagdeliver.com/*"
+        "*://*.tagdeliver.com/*",
+        "*://*.btmessage.com/*",
+        "*://*.adspsp.com/*",
+        "*://*.craniolgozzan.com/*",
+        "*://*.cuinageaquilid.com/*",
+        "*://*.wpshsdk.com/*",
+        "*://*.warpista.com/*",
+        "*://*.overedishlear.com/*",
+        "*://*.tapioni.com/*",
+        "*://*.effectiveratecpm.com/*",
+        "*://*.profitablecpmrate.com/*",
+        "*://*.hhklc.com/*",
+        "*://*.highperformanceformat.com/*"
+    ],
+    "blockedRegex": [
+        ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*"
     ]
 }
