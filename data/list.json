@@ -6206,7 +6206,22 @@
         "*://*.effectiveratecpm.com/*",
         "*://*.profitablecpmrate.com/*",
         "*://*.hhklc.com/*",
-        "*://*.highperformanceformat.com/*"
+        "*://*.highperformanceformat.com/*",
+        "*://*.attractivereception.com/*",
+        "*://*.flushingbeast.com/*",
+        "*://*.moneymade.io/*",
+        "*://*.biggie.theblank.net/*",
+        "*://*.widgetlogic.org/*",
+        "*://*.petametrics.com/*",
+        "*://*.spiny.ai/*",
+        "*://*.loc.kr/*",
+        "*://*.datadome.co/*",
+        "*://*.mmin.io/*",
+        "*://*.omappapi.com/*",
+        "*://*.optmnstr.com/*",
+        "*://*.wsod.com/*",
+        "*://*.ccgateway.net/*",
+        "*://*.ticketjolly.com/*"
     ],
     "blockedRegex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*"
