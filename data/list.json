@@ -6243,7 +6243,10 @@
         "*://*.rolltrk4.com/*",
         "*://*.wargaming-aff.com/*",
         "*://*.sorosehottie.com/*",
-        "*://*.s0-greate.net/*"
+        "*://*.s0-greate.net/*",
+        "*://*.havenclick.com/*",
+        "*://*.romerobill.com/*",
+        "*://*.texas.theblank.net/*"
     ],
     "blockedRegex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*"
