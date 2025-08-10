@@ -6246,7 +6246,19 @@
         "*://*.s0-greate.net/*",
         "*://*.havenclick.com/*",
         "*://*.romerobill.com/*",
-        "*://*.texas.theblank.net/*"
+        "*://*.texas.theblank.net/*",
+        "*://*.22hgc.com/*",
+        "*://*.11ssq.com/*",
+        "*://*.girlgamingempire.org/*",
+        "*://*.fullhouseofanime.com/*",
+        "*://*.thebrowsergame.com/*",
+        "*://*.animeloundry.com/*",
+        "*://*.lust-goddess.com/*",
+        "*://*.margiebackage.shop/*",
+        "*://*.yawnfulharpa.com/*",
+        "*://*.stagesforget.com/*",
+        "*://*.madurird.com/*",
+        "*://*.auzaizouvoum.com/*"
     ],
     "blockedRegex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*"
