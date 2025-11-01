@@ -6321,7 +6321,15 @@
         "*://*.eyebrowscrambledlater.com/*",
         "*://*.kettledroopingcontinuation.com/*",
         "*://*.knkkpmtdesg.com/*",
-        "*://*.mc.yandex.ru/*"
+        "*://*.mc.yandex.ru/*",
+        "*://*.analytics.google.com/*",
+        "*://*.facebook.com/tr/*",
+        "*://*.google.com/ccm/collect*",
+        "*://*.uciservice.com/*",
+        "*://*.c.bing.com/*",
+        "*://*.uqd.io/*",
+        "*://*.detrimentalerasecranny.com/*",
+        "*://*.wayfarerorthodox.com/*"
     ],
     "blockedRegex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*",
