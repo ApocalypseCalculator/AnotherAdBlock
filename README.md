@@ -10,21 +10,10 @@ Additionally, for these sites, custom scripts are injected:
 - YouTube: attempts to force skip the ad/reduce ad duration
 - Reddit: removes ads and unblocks NSFW posts
 - Google, Google Maps, Amazon: removes the ads/promoted listings
+- Wikipedia: block donation prompts
 
+Updated to Manifest V3
 
 ## Installation Guide
 
 Refer to [here](https://github.com/ApocalypseCalculator/AnotherAdBlock/blob/main/install.md) for the installation guide
-
-## Why is this better than AdBlock Plus?
-
-- Minimization. The entire zipped extension folder is less than 50kb. 
-- High accuracy. Tested to have an accuracy of 99%+ in normal browsing circumstances. 
-- No latency. Huge boost in website loading speeds and unnoticable background processing.  
-
-## Coming Soon
-
-- Graphical interactions
-- Toggling on/off
-- Manually including custom domains
-- Allowing direct access
