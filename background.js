@@ -4,6 +4,7 @@ async function checkStaticRules() {
     return rules.length;
 }
 
+// rules need to be cleared, otherwise they can have conflicts with extension reloads
 async function clearRules() {
     const rules = await chrome.declarativeNetRequest.getSessionRules();
     await chrome.declarativeNetRequest.updateSessionRules({
@@ -34,7 +35,7 @@ async function loadUrlBlockers() {
 
     await chrome.declarativeNetRequest.updateSessionRules({
         addRules: totalrules.map((url, i) => ({
-            id: enabledRuleCount + i,
+            id: enabledRuleCount + i, // prevent ID conflicts with static rules
             action: { type: 'block' },
             condition: {
                 ... (url.type === "urlFilter" ? { urlFilter: url.content } : {}),
