@@ -1,19 +1,40 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Another Ad Block",
     "description": "An Ad Blocker extension that attempts to remove as many ads as possible",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "author": "ApocalypseCalculator",
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
-        "<all_urls>"
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "declarativeNetRequestWithHostAccess"
     ],
     "background": {
-        "scripts": [
-            "background.js"
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_icon": {
+            "32": "icon.png"
+        },
+        "default_title": "Another Ad Block"
+    },
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "main_ruleset",
+                "enabled": true,
+                "path": "data/main_rule.json"
+            }
         ]
     },
+    "host_permissions": ["*://*/*"],
     "content_scripts": [
         {
             "js": [
@@ -56,18 +77,5 @@
                 "https://*.wikipedia.org/*"
             ]
         }
-    ],
-    "web_accessible_resources": [],
-    "browser_action": {
-        "default_icon": {
-            "32": "icon.png"
-        },
-        "default_title": "Another Ad Block"
-    },
-    "icons": {
-        "16": "icon.png",
-        "32": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-    }
+    ]
 }

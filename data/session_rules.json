@@ -1,0 +1,26 @@
+{
+    "segments": [
+        "/wp-content/plugins/advanced-ads-pro",
+        "/wp-content/plugins/advanced-ads",
+        "/wp-content/plugins/additional-ad",
+        "/wp-content/plugins/flying-analytics",
+        "/wp-content/plugins/paid-member-subscriptions",
+        "/nmme2023/nmme_bkend.php",
+        "/main2023/bk2023_loer.php",
+        "/main2023/fr2023_loer.js",
+        "youtube.com/api/stats",
+        "youtube.com/pagead",
+        "youtube.com/youtubei/v1/log_event",
+        "play.google.com/log",
+        "youtube.com/ptracking",
+        "youtube.com/pcs/activeview",
+        "jsdelivr.net/npm/disable-devtool",
+        "redditstatic.com/ads",
+        "facebook.com/tr",
+        "google.com/ccm/collect"
+    ],
+    "regex": [
+        ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*",
+        ".*\\/\\/.*\\.google\\..*\\/ads\\/.*"
+    ]
+}

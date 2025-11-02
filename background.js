@@ -1,34 +1,74 @@
-chrome.runtime.getPackageDirectoryEntry(function (root) {
-    root.getFile("./data/list.json", {}, function (fileEntry) {
-        fileEntry.file(function (file) {
-            var reader = new FileReader();
-            reader.onloadend = function (e) {
-                let parsed = JSON.parse(this.result);
-                chrome.webRequest.onBeforeRequest.addListener(
-                    function (details) { return { cancel: true }; },
-                    { urls: parsed.blockedSites },
-                    ["blocking"]
-                );
-                parsed.blockedRegex = parsed.blockedRegex.map((regex) => {
-                    return new RegExp(regex);
-                });
-                chrome.webRequest.onBeforeRequest.addListener(
-                    function (details) {
-                        for(let i = 0; i < parsed.blockedRegex.length; i++) {
-                            if (parsed.blockedRegex[i].test(details.url)) {
-                                return { cancel: true };
-                            }
-                        }
-                        return { cancel: false };
-                    },
-                    { urls: ["<all_urls>"] },
-                    ["blocking"]
-                );
-                chrome.browserAction.setBadgeText({ text: 'ON' });
-                chrome.browserAction.setBadgeBackgroundColor({ color: '#4688F1' });
-                chrome.browserAction.setTitle({ title: "Another Ad Block is Active." });
-            };
-            reader.readAsText(file);
-        });
+async function checkStaticRules() {
+    const rules = await chrome.declarativeNetRequest.getEnabledRulesets();
+    console.log(`${rules.length} static rules active`);
+    return rules.length;
+}
+
+async function clearRules() {
+    const rules = await chrome.declarativeNetRequest.getSessionRules();
+    await chrome.declarativeNetRequest.updateSessionRules({
+        removeRuleIds: rules.map(rule => rule.id)
     });
-})
+    console.log(`Cleared ${rules.length} existing session rules`);
+}
+
+async function loadUrlBlockers() {
+    const enabledRuleCount = await checkStaticRules();
+    const url = chrome.runtime.getURL('data/session_rules.json');
+    const response = await fetch(url);
+    const config = await response.json();
+
+    let totalrules = config.segments.map(segment => {
+        return {
+            content: segment,
+            type: "urlFilter"
+        }
+    }).concat(
+        config.regex.map(regex => {
+            return {
+                content: regex,
+                type: "regexFilter"
+            }
+        })
+    )
+
+    await chrome.declarativeNetRequest.updateSessionRules({
+        addRules: totalrules.map((url, i) => ({
+            id: enabledRuleCount + i,
+            action: { type: 'block' },
+            condition: {
+                ... (url.type === "urlFilter" ? { urlFilter: url.content } : {}),
+                ... (url.type === "regexFilter" ? { regexFilter: url.content } : {}),
+                resourceTypes: [
+                    "main_frame",
+                    "sub_frame",
+                    "stylesheet",
+                    "script",
+                    "image",
+                    "font",
+                    "object",
+                    "xmlhttprequest",
+                    "ping",
+                    "csp_report",
+                    "media",
+                    "websocket",
+                    "webtransport",
+                    "webbundle",
+                    "other"
+                ]
+            }
+        }))
+    });
+
+    console.log(`Loaded ${totalrules.length} session rules`);
+}
+
+async function run() {
+    await clearRules();
+    await loadUrlBlockers();
+    chrome.action.setBadgeText({ text: 'ON' });
+    chrome.action.setBadgeBackgroundColor({ color: '#4688F1' });
+    chrome.action.setTitle({ title: "Another Ad Block is Active." });
+}
+
+run();
