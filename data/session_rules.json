@@ -17,7 +17,8 @@
         "jsdelivr.net/npm/disable-devtool",
         "redditstatic.com/ads",
         "facebook.com/tr",
-        "google.com/ccm/collect"
+        "google.com/ccm/collect",
+        "/cdn-cgi/zaraz/"
     ],
     "regex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*",
