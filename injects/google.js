@@ -1,7 +1,7 @@
 console.log('[AnotherAdBlock]: Google script injected!');
 
 try {
-	let ads = document.querySelectorAll('#tvcap,#atvcap,#rhsads');
+	let ads = document.querySelectorAll('#tvcap,#atvcap,#rhsads,.commercial-unit-desktop-rhs');
 	if(ads.length > 0) {
 		ads.forEach(e => {
 			e.remove();
