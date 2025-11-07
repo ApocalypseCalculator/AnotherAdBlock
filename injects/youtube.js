@@ -17,10 +17,10 @@ try {
                 });
             }
         }
-        let skipbtn = document.querySelector("button.ytp-ad-skip-button-modern");
+        let skipbtn = document.querySelectorAll("button.ytp-ad-skip-button-modern");
         if (defined(skipbtn)) {
-            skipbtn.click();
-            console.log('[AnotherAdBlock]: Clicked skip button!');
+            skipbtn.forEach(btn => btn.click());
+            console.log('[AnotherAdBlock]: Clicked skip button(s)!');
         }
     }, 100);
 
