@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Another Ad Block",
     "description": "An Ad Blocker extension that attempts to remove as many ads as possible",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "author": "ApocalypseCalculator",
     "permissions": [
         "declarativeNetRequest",
