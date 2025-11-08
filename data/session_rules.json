@@ -23,5 +23,8 @@
     "regex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*",
         ".*\\/\\/.*\\.google\\..*\\/ads\\/.*"
+    ],
+    "remote_rules": [
+        "https://raw.githubusercontent.com/jkrejcha/AdmiraList/refs/heads/master/AdmiraList.txt"
     ]
 }
