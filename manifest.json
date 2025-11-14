@@ -42,7 +42,8 @@
             ],
             "matches": [
                 "https://youtube.com/*", "https://www.youtube.com/*"
-            ]
+            ],
+            "all_frames": true
         },
         {
             "js": [
@@ -67,8 +68,7 @@
             "matches": [
                 "https://www.amazon.com/*", "https://www.amazon.ca/*"
             ]
-        }
-        ,
+        },
         {
             "js": [
                 "injects/wikipedia.js"
@@ -76,6 +76,15 @@
             "matches": [
                 "https://*.wikipedia.org/*"
             ]
+        },
+        {
+            "js": [
+                "injects/anti_admiral.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_start"
         }
     ]
 }
