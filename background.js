@@ -23,7 +23,7 @@ async function clearSessionRules() {
 function fetchRemoteRules(urls) {
     return Promise.all(urls.map(async (url) => {
         let response = await fetch(url);
-        if(response.ok) {
+        if (response.ok) {
             let result = (await response.text()).trim().split('\n').map(e => e.trim());
             console.log(`Fetched ${result.length} remote rules from ${url}`);
             return result;
@@ -97,12 +97,16 @@ async function loadSessionUrlBlockers() {
     console.log(`Loaded ${totalrules.length} session rules`);
 }
 
-async function run() {
-    await clearSessionRules();
-    await loadSessionUrlBlockers();
+function setBadge() {
     chrome.action.setBadgeText({ text: 'ON' });
     chrome.action.setBadgeBackgroundColor({ color: '#4688F1' });
     chrome.action.setTitle({ title: "Another Ad Block is Active." });
+}
+
+async function run() {
+    await clearSessionRules();
+    await loadSessionUrlBlockers();
+    setBadge();
 }
 
 run();

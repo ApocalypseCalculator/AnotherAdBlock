@@ -19,11 +19,14 @@
         "redditstatic.com/ads",
         "facebook.com/tr",
         "google.com/ccm/collect",
-        "/cdn-cgi/zaraz/"
+        "/cdn-cgi/zaraz/",
+        "content-loader.com/player/"
     ],
     "regex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*",
-        ".*\\/\\/.*\\.google\\..*\\/ads\\/.*"
+        ".*\\/\\/.*\\.google\\..*\\/ads\\/.*",
+        ".*showads\\.js",
+        "ad-block-detect"
     ],
     "remote_rules": [
         "https://raw.githubusercontent.com/jkrejcha/AdmiraList/refs/heads/master/AdmiraList.txt"

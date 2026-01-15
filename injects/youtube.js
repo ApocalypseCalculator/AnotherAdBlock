@@ -17,11 +17,16 @@ try {
                 });
             }
         }
-        let skipbtn = document.querySelectorAll("button.ytp-ad-skip-button-modern");
-        if (defined(skipbtn)) {
+        let skipbtn = document.querySelectorAll("button.ytp-ad-skip-button-modern,button.ytp-skip-ad-button");
+        if (skipbtn.length > 0) {
             skipbtn.forEach(btn => btn.click());
             console.log('[AnotherAdBlock]: Clicked skip button(s)!');
         }
+        document.querySelectorAll('ytd-popup-container>tp-yt-paper-dialog>ytd-enforcement-message-view-model').forEach(e => {
+            e.parentNode.parentNode.remove();
+            document.querySelectorAll('tp-yt-iron-overlay-backdrop').forEach(b => b.remove());
+        });
+
     }, 100);
 
     setInterval(() => {
