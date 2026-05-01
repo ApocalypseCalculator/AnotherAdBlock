@@ -20,7 +20,10 @@
         "facebook.com/tr",
         "google.com/ccm/collect",
         "/cdn-cgi/zaraz/",
-        "content-loader.com/player/"
+        "content-loader.com/player/",
+        "ads/ascendeum",
+        "asc_prebid.js",
+        "bydataAnalytics.js"
     ],
     "regex": [
         ".*\\/\\/[0-9a-fA-F]{10}\\.[0-9a-fA-F]{10}\\.com\\/.*",
